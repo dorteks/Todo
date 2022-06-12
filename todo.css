@@ -67,6 +67,18 @@ body {
   font-size: 1rem;
 }
 
-.todoList {
+.deleteAllBtn {
+  font: inherit;
   text-align: center;
+  background-color: rgb(206, 35, 77);
+  height: 31px;
+}
+
+.footer button:hover {
+  background: red;
+}
+
+.footer button.active {
+  opacity: 1;
+  pointer-events: auto;
 }
