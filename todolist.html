@@ -4,28 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDo List</title>
+    <title>ToDo App</title>
     <link rel="stylesheet" href="todo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
   <body>
     <div class="whole">
-      <div class="header">
-        <h1>TODO LIST</h1>
-      </div>
+      <header>TODO LIST APP</header>
 
       <div class="inputField">
         <input type="text" placeholder="Enter your to do here" />
-        <button class="addBtn">Add</button>
+        <button>Add<i class="fas fa-plus"></i></button>
       </div>
 
       <ul class="todoList"></ul>
 
       <div class="footer">
-        <span>You have 4 <span class="pending"></span> pending tasks</span>
+        <span>You have <span class="pending"><y/span> pending tasks</span>
         <br />
-        <button class="deleteAllBtn">Clear All</button>
+        <button>Clear All</button>
       </div>
     </div>
+
+
     <script src="todo.js"></script>
   </body>
 </html>
