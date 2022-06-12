@@ -26,9 +26,8 @@ body {
 
 .whole header {
   text-align: center;
-  margin: 1rem 0 1rem;
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .whole .inputField {
@@ -67,7 +66,8 @@ body {
   transition: all 0.25s ease;
 }
 
-.inputField button:hover {
+.inputField button:hover,
+.footer button:hover {
   background: rgb(0, 203, 253);
 }
 
@@ -76,21 +76,20 @@ body {
   pointer-events: auto;
 }
 
-.addBtn {
-  text-align: center;
-  height: 31px;
-}
-
-.todoList {
+.whole .todoList {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.15rem;
   margin-bottom: 20px;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .todoList li {
+  position: relative;
   font: inherit;
   font-size: inherit;
+  background: whitesmoke;
   border-radius: 3px;
   padding: 10px 15px;
   cursor: default;
@@ -117,15 +116,26 @@ body {
   right: 0px;
 }
 
-.footer {
-  text-align: center;
+.whole .footer {
+  align-items: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1rem;
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
 }
 
-.footer button:hover {
-  background: red;
+.footer button {
+  height: 30px;
+  width: 60px;
+  margin-left: 8px;
+  background: skyblue;
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.25s ease;
 }
 
 .footer button.active {
