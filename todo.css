@@ -49,17 +49,24 @@ body {
 .inputField button {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: oblique;
+  font-size: 15px;
   height: 35px;
   width: 45px;
+  border: none;
+  outline: none;
   margin-left: 8px;
   background: rgb(189, 223, 236);
   color: rgb(17, 16, 16);
   cursor: pointer;
   border-radius: 3px;
-  opacity: 0.6;
+  opacity: 0.4;
   pointer-events: none;
   transition: all 0.25s ease;
   outline: none;
+}
+.inputField button.active {
+  opacity: 5;
+  pointer-events: auto;
 }
 .whole .todoList {
   max-height: 270px;
@@ -101,19 +108,23 @@ body {
   margin-top: 25px;
 }
 .footer button {
-  position: absolute;
+  position: relative;
   height: 28px;
   width: 60px;
   margin-left: 8px;
-  right: 140px;
+  right: -70px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: oblique;
   background: rgb(189, 223, 236);
   color: rgb(7, 6, 6);
   cursor: pointer;
   border-radius: 3px;
-  opacity: 0.6;
+  opacity: 0.4;
   pointer-events: none;
   transition: all 0.25s ease;
   outline: none;
+}
+.footer button.active {
+  opacity: 1;
+  pointer-events: auto;
 }
