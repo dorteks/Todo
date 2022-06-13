@@ -37,7 +37,7 @@ function showTasks() {
 
   let newLiTag = "";
   listArray.forEach((element, index) => {
-    newLiTag += `<li>${element}<span><i class="fas fa-trash"></i></span> </li>`;
+    newLiTag = `<li> ${element} <span><i class="fas fa-trash"></i></span> </li>`;
   });
 
   todoList.innerHTML = newLiTag;
