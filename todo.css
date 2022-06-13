@@ -47,6 +47,8 @@ body {
   border: 1px solid skyblue;
 }
 .inputField button {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: oblique;
   height: 35px;
   width: 45px;
   margin-left: 8px;
@@ -99,9 +101,13 @@ body {
   margin-top: 25px;
 }
 .footer button {
+  position: absolute;
   height: 28px;
   width: 60px;
   margin-left: 8px;
+  right: 140px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: oblique;
   background: rgb(189, 223, 236);
   color: rgb(7, 6, 6);
   cursor: pointer;
