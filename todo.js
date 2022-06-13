@@ -1,74 +1,62 @@
-const inputBox = document.querySelector(".inputField input");
-const addBtn = document.querySelector(".inputField button");
-const todoLists = document.querySelector(".todoList");
-const deleteAllBtn = document.querySelector(".footer button");
+// const inputBox = document.querySelector(".inputField input");
+// const addBtn = document.querySelector(".inputField button");
+// const todoList = document.querySelector(".todoList");
+// const deleteAllBtn = document.querySelector(".footer button");
+// const pendingTasks = document.querySelector(".pendingTasks");
 
-inputBox.onKeyUp = () => {
-  let UserEnteredValue = inputBox.value;
-  if (UserEnteredValue.trim() != 0) {
-    addBtn.classList.add("active");
-  } else {
-    addBtn.classList.remove("active");
-  }
-  //display the updated list
-  showTasks();
-};
+// inputBox.onKeyUp = () => {
+//   let insertedValue = inputBox.value;
+//   if (insertedValue.trim() != 0) {
+//     addBtn.classList.add("active");
+//   } else {
+//     addBtn.classList.remove("active");
+//   }
+// };
 
-addBtn.onclick = () => {
-  let UserEnteredValue = inputBox.value;
-  let todoLists = todoLists.getItem("New Todo");
-  if (todoLists == null) {
-    listArray = [];
-  } else {
-    listArray = JSON.parse(todoLists);
-  }
-  listArray.push(UserEnteredValue);
-  todoLists.setItem("New Todo", JSON.stringify(todoLists));
-  //display the updated list
-  showTasks();
-  addBtn.classList.remove("active");
-};
+// showTasks();
 
-function showTasks() {
-  let todoLists = todoLists.getItem("New Todo");
-  if (todoLists == null) {
-    listArray = [];
-  } else {
-    listArray = JSON.parse(todoLists);
-  }
+// addBtn.onclick = () => {
+//   let insertedValue = inputBox.value;
 
-  const pending = document.querySelector(".pending");
-  pendingNum.textContent = listArray.length;
-  if (listArray.length > 0) {
-    deleteAllBtn.classList.add("active");
-  } else {
-    deleteAllBtn.classList.remove("active");
-  }
+//   let getLocalStorageData = localStorage.getItem("New Todo");
+//   if (getLocalStorageData == null) {
+//     listArray = [];
+//   } else {
+//     listArray = JSON.parse(getLocalStorageData);
+//   }
 
-  let newLiTag = "";
-  listArray.forEach((element, index) => {
-    newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
-  });
+//   listArray.push(insertedValue);
+//   localStorage.setItem("New Todo", JSON.stringify(listArray));
+//   showTasks();
+//   addBtn.classList.remove("active");
+// };
 
-  todoLists.innerHTML = newLiTag;
-  inputBox.value = "";
-}
+// function showTasks() {
+//   let getLocalStorageData = localStorage.getItem("New Todo");
+//   if (getLocalStorageData == null) {
+//     listArray = [];
+//   } else {
+//     listArray = JSON.parse(getLocalStorageData);
+//   }
 
-// const deleteBtn = document.querySelector(".deleteBtn");
-// const deleteAllBtn = document.querySelector(".deleteAllBtn");
+//   let newLiTag = "";
+//   listArray.forEach((element, index) => {
+//     newTagLi += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+//   });
+//   todoList.innerHTML = newLiTag;
+//   inputBox.value;
+// }
 
-function deleteTask(index) {
-  let todoLists = todoLists.getItem("New Todo");
-  listArray = JSON.parse(todoLists);
-  listArray.splice(index, 1);
-  todoLists.setItem("New Todo", JSON.stringify(todoLists));
-  //display the updated list
-  showTasks();
-}
+// function deleteTask() {
+//   let getLocalStorageData = localStorage.getItem("New Todo");
+//   listArray = JSON.parse(getLocalStorageData);
+//   listArray.splice(index, 1);
+//   localStorage.setItem("New Todo", JSON.stringify(listArray));
+//   showTasks();
+// }
 
-deleteAllBtn.onclick = () => {
-  listArray = [];
-  todoLists.setItem("New Todo", JSON.stringify(todoLists));
-  //display the updated list
-  showTasks();
-};
+// deleteAllBtn.onclick = () => {
+//   listArray = [];
+//   localStorage.setItem("New Todo", JSON.stringify(listArray));
+//   showTasks();
+// };
